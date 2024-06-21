@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"br-utils-go/brutils"
+	"github.com/CaioMartinss/br-utils-go/pacotes/brutils"
 )
 
 func main() {
