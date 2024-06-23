@@ -1,4 +1,4 @@
-<h3 align="center">br-utils-go</h3>
+<h1 align="center">br-utils-go</h1>
 
 br-utils-go é uma biblioteca de utilitários em Go para desenvolvedores brasileiros. Ela oferece diversas funcionalidades úteis para validação de dados, manipulação de strings e muito mais.
 
@@ -11,7 +11,7 @@ go get github.com/CaioMartinss/br-utils-go
 
 ```
 
-### Uso
+## Uso
 
 #### Validação de CPF
 
@@ -37,13 +37,7 @@ func main() {
 
 #### Como Contribuir
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
-
-1. Faça um fork do repositório
-2. Crie uma branch para sua feature (`git checkout -b minha-feature`)
-3. Comite suas mudanças (`git commit -am 'Adiciona minha feature'`)
-4. Faça push para a branch (`git push origin minha-feature`)
-5. Crie um novo Pull Request
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request, para contribuir leia acessa as diretrizes de contribuição [aqui](CONTRIBUTING.MD).
 
 
 
