@@ -7,7 +7,7 @@ br-utils-go é uma biblioteca de utilitários em Go para desenvolvedores brasile
 Para instalar a biblioteca, você pode utilizar o `go get`:
 
 ```bash
-go get github.com/CaioMartinss/br-utils-go
+go get github.com/CaioMartinss/br-utils-go/brutils
 
 ```
 
