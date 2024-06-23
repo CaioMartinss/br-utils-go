@@ -26,13 +26,46 @@ import (
 )
 
 func main() {
-    cpf := "12345678909"
-    if pacotes.IsValidCPF(cpf) {
-        fmt.Println("CPF válido")
-    } else {
-        fmt.Println("CPF inválido")
-    }
+	cpf := "123.456.789-09"
+	fmt.Printf("CPF %s é válido? %v\n", cpf, brutils.ValidaCPF(cpf))
+	fmt.Printf("CPF formatado: %s\n", brutils.FormataCPF(cpf))
+
 }
+```
+
+#### Output
+
+```go
+CPF 123.456.789-09 é válido? true
+CPF formatado: 123.456.789-09
+
+```
+
+#### Validação de CNPJ
+
+A biblioteca inclui uma função para validar CNPJ.
+
+```go
+package main
+
+import (
+    "fmt"
+    "github.com/CaioMartinss/br-utils-go/brutils"
+)
+
+func main() {
+
+	cnpj := "12.345.678/0001-95"
+	fmt.Printf("CNPJ %s é válido? %v\n", cnpj, brutils.ValidaCNPJ(cnpj))
+	fmt.Printf("CNPJ formatado: %s\n", brutils.FormataCNPJ(cnpj))
+}
+```
+#### Output
+
+```go
+CNPJ 12.345.678/0001-95 é válido? true
+CNPJ formatado: 12.345.678/0001-95
+
 ```
 
 ### Como Contribuir
