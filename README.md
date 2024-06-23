@@ -22,7 +22,7 @@ package main
 
 import (
     "fmt"
-    "github.com/CaioMartinss/br-utils-go/cmd"
+    "github.com/CaioMartinss/br-utils-go/brutils"
 )
 
 func main() {
@@ -50,7 +50,7 @@ package main
 
 import (
     "fmt"
-    "github.com/CaioMartinss/br-utils-go/cmd"
+    "github.com/CaioMartinss/br-utils-go/brutils"
 )
 
 func main() {
