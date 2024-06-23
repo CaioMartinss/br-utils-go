@@ -50,3 +50,15 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou env
 ### Licença
 
 Este projeto está licenciado sob a [Licença MIT](LICENSE). Veja o arquivo LICENSE para mais detalhes.
+
+
+
+
+### br-utils-go v1.0.0
+
+![badge](https://img.shields.io/badge/Atenção-yellow?style=for-the-badge&logo=none)
+
+Obs: Esta é a versão v1.0.0 que inclui, por enquanto, verificação e transformação de formatos corretos para CPFs e CNPJs.
+
+
+
