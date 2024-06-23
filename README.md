@@ -35,9 +35,9 @@ func main() {
 }
 ```
 
-#### Como Contribuir
+### Como Contribuir
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request, para contribuir leia acessa as diretrizes de contribuição [aqui](CONTRIBUTING).
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request. Para contribuir, leia as diretrizes de contribuição [aqui](CONTRIBUTING.md).
 
 
 
