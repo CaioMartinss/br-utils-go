@@ -56,9 +56,10 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE). Veja o arquivo LICE
 
 ### br-utils-go v1.0.0
 
-![badge](https://img.shields.io/badge/Atenção-yellow?style=for-the-badge&logo=none)
+![badge atenção](https://img.shields.io/badge/Atenção-yellow?style=for-the-badge&logo=none)
+![badge versão](https://img.shields.io/badge/Versão-v1.0.0-blue?style=for-the-badge)
 
-Obs: Esta é a versão v1.0.0 que inclui, por enquanto, verificação e transformação de formatos corretos para CPFs e CNPJs.
+Biblioteca em Go para validação e formatação de CPFs e CNPJs, na versão inicial com foco em transformação de formatos corretos.
 
 
 
