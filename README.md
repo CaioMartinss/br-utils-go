@@ -2,7 +2,7 @@
 
 br-utils-go é uma biblioteca de utilitários em Go para desenvolvedores brasileiros. Ela oferece diversas funcionalidades úteis para validação de dados, manipulação de strings e muito mais.
 
-### Instalação
+## Instalação
 
 Para instalar a biblioteca, você pode utilizar o `go get`:
 
