@@ -1,0 +1,1 @@
+ValidarNumeroMovel: função para validar se um número está no formato correto de um número móvel brasileiro. O formato padrão de um número móvel brasileiro é composto por 11 dígitos, começando com o dígito 9, seguido pelo código de área (DDD) de 2 dígitos.
