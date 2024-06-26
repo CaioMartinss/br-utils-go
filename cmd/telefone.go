@@ -1,21 +1,30 @@
 package brutils
 
 import (
-	"regexp"
+	"fmt"
 )
 
 // ValidaNumeroMovel valida se um número está no formato correto de um número móvel
 func ValidaNumeroMovel(numero string) bool {
-	// Expressão regular para validar o formato de um número móvel
-	re := regexp.MustCompile(`^\(?\d{2}\)?9\d{8}$`)
-	return re.MatchString(numero)
+	numero = limpa(numero)
+	if len(numero) != 11 {
+		return false
+	}
+
+	if todosDigitosIguais(numero) {
+		return false
+	}
+
+	return true
 }
 
-// FormataNumero verifica se um número de telefone está no formato correto.
-func FormataNumero(numero string) bool {
+// FormataNumeroMovel formata um Numero Movel, com o DDD entre parênteses
+func FormataNumeroMovel(numero string) string {
 	numero = limpa(numero)
-	// Expressão regular para validar o formato do número de telefone
-	padrao := `^\(\d{2}\)\s?\d{4,5}-\d{4}$`
-	regex := regexp.MustCompile(padrao)
-	return regex.MatchString(numero)
+	if len(numero) != 11 {
+		return ""
+	}
+
+	return fmt.Sprintf("(%s)%s", numero[:2], numero[2:])
 }
+
