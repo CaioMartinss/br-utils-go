@@ -46,7 +46,7 @@ func ConsultaCEP(cep string) (*DadosCEP, error) {
 
 	// Verifica o status da resposta
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("Erro ao consultar o ViaCEP. Status: %d", resp.StatusCode)
+		return nil, fmt.Errorf("erro ao consultar o ViaCEP. Status: %d", resp.StatusCode)
 	}
 
 	// Decodifica a resposta JSON para a struct DadosCEP
