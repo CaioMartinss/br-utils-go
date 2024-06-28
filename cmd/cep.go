@@ -32,7 +32,7 @@ func ValidaCEP(cep string) bool {
 func ConsultaCEP(cep string) (*DadosCEP, error) {
 	// Verifica se o CEP está no formato válido
 	if !ValidaCEP(cep) {
-		return nil, fmt.Errorf("Formato de CEP inválido")
+		return nil, fmt.Errorf("formato de CEP inválido")
 	}
 
 	url := fmt.Sprintf("https://viacep.com.br/ws/%s/json/", cep)
@@ -46,7 +46,7 @@ func ConsultaCEP(cep string) (*DadosCEP, error) {
 
 	// Verifica o status da resposta
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("Erro ao consultar o ViaCEP. Status: %d", resp.StatusCode)
+		return nil, fmt.Errorf("erro ao consultar o ViaCEP. Status: %d", resp.StatusCode)
 	}
 
 	// Decodifica a resposta JSON para a struct DadosCEP
