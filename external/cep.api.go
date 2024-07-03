@@ -1,10 +1,11 @@
-package brutils
+package external
 
 import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"regexp"
+	
+	"github.com/CaioMartinss/br-utils-go/validation"
 )
 
 // DadosCEP representa a estrutura dos dados retornados pela API do ViaCEP
@@ -17,21 +18,14 @@ type DadosCEP struct {
 	Uf          string `json:"uf"`
 	Ibge        string `json:"ibge"`
 	Gia         string `json:"gia"`
-	Ddd 		string `json:"ddd"`
-	Siafi		string `json:"siafi"`
-}
-
-// ValidaCEP verifica se um CEP está no formato válido
-func ValidaCEP(cep string) bool {
-	// Expressão regular para validar o formato de CEP (opcionalmente com hífen)
-	cepRegex := regexp.MustCompile(`^\d{5}-?\d{3}$`)
-	return cepRegex.MatchString(cep)
+	Ddd         string `json:"ddd"`
+	Siafi       string `json:"siafi"`
 }
 
 // ConsultaCEP realiza uma consulta ao ViaCEP e retorna os dados do CEP
 func ConsultaCEP(cep string) (*DadosCEP, error) {
 	// Verifica se o CEP está no formato válido
-	if !ValidaCEP(cep) {
+	if !validation.ValidaCEP(cep) {
 		return nil, fmt.Errorf("formato de CEP inválido")
 	}
 

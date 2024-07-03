@@ -1,4 +1,4 @@
-package brutils
+package validation
 
 import (
 	"strconv"
