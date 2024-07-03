@@ -11,6 +11,7 @@ go get module github.com/CaioMartinss/br-utils-go
 
 ```
 
+
 ## Uso
 
 #### Validação de CPF
@@ -50,7 +51,7 @@ package main
 
 import (
     "fmt"
-    "github.com/CaioMartinss/br-utils-go/brutils"
+    "github.com/CaioMartinss/br-utils-go"
 )
 
 func main() {
@@ -67,6 +68,24 @@ CNPJ 12.345.678/0001-95 é válido? true
 CNPJ formatado: 12.345.678/0001-95
 
 ```
+
+### Dependências Externas
+
+<details>
+<summary>CEP</summary>
+
+Este projeto utiliza o serviço [ViaCep](https://viacep.com.br/), uma API pública brasileira que permite consultar e validar CEPs. Ela fornece informações atualizadas diretamente dos Correios, incluindo detalhes como logradouro, bairro, cidade e estado associados a um CEP.
+
+</details>
+
+<details>
+<summary>CNPJ</summary>
+
+Este projeto utiliza o serviço [receitaWS](https://receitaws.com.br/#section-api), uma API que facilita a consulta de CNPJs no Brasil. Com ele, é possível verificar a existência de um CNPJ, obter informações detalhadas sobre a empresa cadastrada, como razão social, data de abertura, natureza jurídica, situação cadastral e endereço.
+
+</details>
+
+
 
 ### Lista completa de exemplos
 Confira a lista completa de exemplos [aqui](../dev/exemplos.md). Esta lista contém diversos casos de uso e demonstrações que podem ajudar a entender melhor o projeto.
@@ -93,8 +112,8 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE). Veja o arquivo LICE
 
 ### br-utils-go v1.0.0
 
-![badge atenção](https://img.shields.io/badge/Atenção-yellow?style=for-the-badge&logo=none)
-![badge versão](https://img.shields.io/badge/Versão-v1.0.0-blue?style=for-the-badge)
+[![badge atenção](https://img.shields.io/badge/Atenção-yellow?style=flat&logo=none)](https://example.com)
+[![badge versão](https://img.shields.io/badge/Versão-v1.0.0-blue?style=flat&logo=none)](https://example.com)
 
 Biblioteca em Go para validação e formatação de CPFs e CNPJs, na versão inicial com foco em transformação de formatos corretos.
 
