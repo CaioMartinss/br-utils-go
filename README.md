@@ -7,7 +7,7 @@ br-utils-go é uma biblioteca de utilitários em Go para desenvolvedores brasile
 Para instalar a biblioteca, você pode utilizar o `go get`:
 
 ```bash
-go get github.com/CaioMartinss/br-utils-go/brutils
+go get module github.com/CaioMartinss/br-utils-go
 
 ```
 
@@ -67,6 +67,16 @@ CNPJ 12.345.678/0001-95 é válido? true
 CNPJ formatado: 12.345.678/0001-95
 
 ```
+
+### Lista completa de exemplos 
+Confira a lista completa de exemplos [aqui](exemplos.md). Esta lista contém diversos casos de uso e demonstrações que podem ajudar a entender melhor o projeto.
+
+
+
+### Branch de Desenvolvimento (dev)
+
+A branch mais atual e ativa para desenvolvimento é a [dev](). Esta branch é onde estão sendo feitas as atualizações mais recentes e onde novos recursos estão sendo desenvolvidos e testados.
+
 
 ### Como Contribuir
 
