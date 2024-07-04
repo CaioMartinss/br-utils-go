@@ -1,11 +1,12 @@
+// Package external contém funções para interagir com APIs externas.
 package external
 
 import (
-	"encoding/json"
-	"fmt"
-	"net/http"
-	
-	"github.com/CaioMartinss/br-utils-go/validation"
+	"encoding/json" // Pacote json para codificação e decodificação JSON
+	"fmt"           // Pacote fmt para formatação de saída
+	"net/http"      // Pacote http para realizar requisições HTTP
+
+	"github.com/CaioMartinss/br-utils-go/validation" // Pacote validation para validação de CEP
 )
 
 // DadosCEP representa a estrutura dos dados retornados pela API do ViaCEP

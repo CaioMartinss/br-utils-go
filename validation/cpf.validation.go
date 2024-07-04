@@ -1,8 +1,9 @@
+// Package validation contém funções para validação e formatação de CPF.
 package validation
 
 import (
-	"fmt"
-	"strconv"
+	"fmt"     // Pacote fmt para formatação de saída
+	"strconv" // Pacote strconv para conversão de tipos
 )
 
 // ValidaCPF verifica se um CPF é válido

@@ -1,8 +1,11 @@
+// Package validation contém funções para validação e formatação de números telefônicos e móveis, além de consulta de estado por DDD.
 package validation
 
-import "fmt"
+import (
+	"fmt" // Pacote fmt para formatação de saída
+)
 
-// ValidaNumero valida se um número está no formato correto de um número Telefonico
+// ValidaNumero valida se um número está no formato correto de um número telefônico
 func ValidaNumero(numero string) bool {
 	numero = limpa(numero)
 	if len(numero) != 10 {
@@ -16,7 +19,7 @@ func ValidaNumero(numero string) bool {
 	return true
 }
 
-// FormataNumero formata um Numero , com o DDD entre parênteses
+// FormataNumero formata um número telefônico, com o DDD entre parênteses
 func FormataNumero(numero string) string {
 	numero = limpa(numero)
 	if len(numero) != 10 {
@@ -40,7 +43,7 @@ func ValidaNumeroMovel(numero string) bool {
 	return true
 }
 
-// FormataNumeroMovel formata um Numero Movel, com o DDD entre parênteses
+// FormataNumeroMovel formata um número móvel, com o DDD entre parênteses
 func FormataNumeroMovel(numero string) string {
 	numero = limpa(numero)
 	if len(numero) != 11 {
@@ -50,6 +53,7 @@ func FormataNumeroMovel(numero string) string {
 	return fmt.Sprintf("(%s)%s", numero[:2], numero[2:])
 }
 
+// DDDporEstado retorna o estado associado ao DDD fornecido
 func DDDporEstado(ddd string) string {
 	var estado string
 	ddd = limpa(ddd)
