@@ -18,7 +18,7 @@ go get module github.com/CaioMartinss/br-utils-go
 
 A biblioteca inclui uma função para validar CPFs.
 
-#### Input
+#### Inpu
 
 Criando exemplos de validação de CPF usando as funções definidas em `validation/cpf.validation.go`.
 
@@ -75,7 +75,7 @@ CPF formatado: 123.456.789-09
 
 A biblioteca inclui uma função para validar CNPJ.
 
-#### Inputa
+#### Input
 
 Criando exemplos de validação de CNPJ usando as funções definidas em `validation/cnpj.validation.go`.
 
