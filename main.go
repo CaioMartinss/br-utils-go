@@ -15,4 +15,7 @@ func main() {
 
 	fmt.Println("\nExemplo de validação de CEP:")
 	examples.Cep_function()
+
+	fmt.Println("telefone")
+	examples.Telefone_function()
 }
