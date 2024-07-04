@@ -1,13 +1,17 @@
+// Package examples contém exemplos de uso das funções de validação e consulta de CEP.
 package examples
 
 import (
-	"fmt"
-
-	"github.com/CaioMartinss/br-utils-go/validation"
-	
-	"github.com/CaioMartinss/br-utils-go/external"
+	"fmt" // Pacote fmt para formatação de saída
+	"github.com/CaioMartinss/br-utils-go/validation" // Pacote validation para validação de CEP
+	"github.com/CaioMartinss/br-utils-go/external"   // Pacote external para consulta de CEP
 )
 
+// Cep_function demonstra a validação e consulta de um CEP no Brasil.
+// A função valida o formato do CEP usando a função ValidaCEP do pacote validation.
+// Em seguida, consulta os dados do CEP usando a função ConsultaCEP do pacote external.
+// Os dados do CEP são exibidos na saída padrão. Em caso de formato inválido do CEP
+// ou erro na consulta, mensagens apropriadas são exibidas.
 func Cep_function() {
 	cep := "01001-000" // CEP de exemplo
 	if !validation.ValidaCEP(cep) {
@@ -30,7 +34,6 @@ func Cep_function() {
 	fmt.Println("UF:", dadosCEP.Uf)
 	fmt.Println("IBGE:", dadosCEP.Ibge)
 	fmt.Println("GIA:", dadosCEP.Gia)
-	fmt.Println("IBGE:", dadosCEP.Ddd)
-	fmt.Println("GIA:", dadosCEP.Siafi)
-
+	fmt.Println("DDD:", dadosCEP.Ddd)
+	fmt.Println("SIAFI:", dadosCEP.Siafi)
 }

@@ -1,10 +1,11 @@
+// Package validation contém funções para validação e formatação de CNPJ.
 package validation
 
 import (
 	//"regexp"
-	"strconv"
-	"strings"
-	"fmt"
+	"fmt"     // Pacote fmt para formatação de saída
+	"strconv" // Pacote strconv para conversão de tipos
+	"strings" // Pacote strings para manipulação de strings
 )
 
 // limpa remove caracteres especiais do CNPJ

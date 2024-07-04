@@ -1,7 +1,8 @@
+// Package validation contém funções para validação de dados relacionados a CEP, CPF, CNPJ, etc.
 package validation
 
 import (
-	"regexp"
+	"regexp" // Pacote regexp para manipulação de expressões regulares
 )
 
 // ValidaCEP verifica se um CEP está no formato válido
