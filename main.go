@@ -1,16 +1,26 @@
+// Package main é o ponto de entrada do programa.
 package main
 
 import (
 	"fmt"
-	"github.com/CaioMartinss/br-utils-go/cmd"
+
+	"github.com/CaioMartinss/br-utils-go/examples"
 )
 
 func main() {
-	cpf := "123.456.789-09"
-	fmt.Printf("CPF %s é válido? %v\n", cpf, brutils.ValidaCPF(cpf))
-	fmt.Printf("CPF formatado: %s\n", brutils.FormataCPF(cpf))
+	// Imprime um exemplo de validação de CPF
+	fmt.Println("Exemplo de validação de CPF:")
+	examples.Cpf_function()
 
-	cnpj := "12.345.678/0001-95"
-	fmt.Printf("CNPJ %s é válido? %v\n", cnpj, brutils.ValidaCNPJ(cnpj))
-	fmt.Printf("CNPJ formatado: %s\n", brutils.FormataCNPJ(cnpj))
+	// Imprime um exemplo de validação de CNPJ
+	fmt.Println("\nExemplo de validação de CNPJ:")
+	examples.Cnpj_function()
+
+	// Imprime um exemplo de validação de CEP
+	fmt.Println("\nExemplo de validação de CEP:")
+	examples.Cep_function()
+
+	// Imprime um exemplo de validação de Telefone
+	fmt.Println("\nExemplo de validação de Telefone:")
+	examples.Telefone_function()
 }
