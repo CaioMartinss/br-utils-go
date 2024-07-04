@@ -18,18 +18,44 @@ go get module github.com/CaioMartinss/br-utils-go
 
 A biblioteca inclui uma função para validar CPFs.
 
+#### Input
+
+Criando exemplos de validação de CPF usando as funções definidas em `validation/cpf.validation.go`.
+
+```go
+package examples
+
+import (
+	"fmt"
+	"github.com/CaioMartinss/br-utils-go/validation"
+)
+
+func Cpf_function() {
+	cpf := "123.456.789-09"
+	fmt.Printf("CPF %s é válido? %v\n", cpf, validation.ValidaCPF(cpf))
+	fmt.Printf("CPF formatado: %s\n", validation.FormataCPF(cpf))
+
+	cpf = "12345678909"
+	fmt.Printf("CPF %s é válido? %v\n", cpf, validation.ValidaCPF(cpf))
+	fmt.Printf("CPF formatado: %s\n", validation.FormataCPF(cpf))
+
+
+}
+```
+No arquivo `main.go`, chamando o exemplo de validação de CPF e exibindo-o:
+
 ```go
 package main
 
 import (
-    "fmt"
-    "github.com/CaioMartinss/br-utils-go/brutils"
+	"fmt"
+
+	"github.com/CaioMartinss/br-utils-go/examples"
 )
 
 func main() {
-	cpf := "123.456.789-09"
-	fmt.Printf("CPF %s é válido? %v\n", cpf, brutils.ValidaCPF(cpf))
-	fmt.Printf("CPF formatado: %s\n", brutils.FormataCPF(cpf))
+	fmt.Println("Exemplo de validação de CPF:")
+	examples.Cpf_function()
 
 }
 ```
@@ -37,7 +63,10 @@ func main() {
 #### Output
 
 ```go
+Exemplo de validação de CPF:
 CPF 123.456.789-09 é válido? true
+CPF formatado: 123.456.789-09
+CPF 12345678909 é válido? true
 CPF formatado: 123.456.789-09
 
 ```
@@ -46,26 +75,74 @@ CPF formatado: 123.456.789-09
 
 A biblioteca inclui uma função para validar CNPJ.
 
+#### Inputa
+
+Criando exemplos de validação de CNPJ usando as funções definidas em `validation/cnpj.validation.go`.
+
+```go
+package examples
+
+import (
+	"fmt"
+	"github.com/CaioMartinss/br-utils-go/validation"
+
+	"github.com/CaioMartinss/br-utils-go/external"
+)
+
+func Cnpj_function() {
+	cnpj := "00000000000191"
+	if !validation.ValidaCNPJ(cnpj) {
+		fmt.Println("CNPJ inválido")
+		return
+	}
+
+	empresa, err := external.ConsultaCNPJ(cnpj)
+	if err != nil {
+		fmt.Println("Erro ao consultar CNPJ:", err)
+		return
+	}
+
+	fmt.Printf("CNPJ: %s\n", validation.FormataCNPJ(cnpj))
+	fmt.Printf("Nome: %s\n", empresa.Nome)
+	fmt.Printf("Nome Fantasia: %s\n", empresa.Fantasia)
+	if len(empresa.Atividades) > 0 {
+		fmt.Printf("Atividade Principal: %s\n", empresa.Atividades[0].Texto)
+	}
+	fmt.Printf("Município: %s\n", empresa.Municipio)
+	fmt.Printf("UF: %s\n", empresa.UF)
+	fmt.Printf("Status: %s\n", empresa.Status)
+}
+```
+
+No arquivo `main.go`, chamando o exemplo de validação e consulta de CNPJ e exibindo-o:
+
 ```go
 package main
 
 import (
-    "fmt"
-    "github.com/CaioMartinss/br-utils-go"
+	"fmt"
+
+	"github.com/CaioMartinss/br-utils-go/examples"
 )
 
 func main() {
-
-	cnpj := "12.345.678/0001-95"
-	fmt.Printf("CNPJ %s é válido? %v\n", cnpj, brutils.ValidaCNPJ(cnpj))
-	fmt.Printf("CNPJ formatado: %s\n", brutils.FormataCNPJ(cnpj))
+	fmt.Println("\nExemplo de validação de CNPJ:")
+	examples.Cnpj_function()
 }
+
 ```
+
 #### Output
 
 ```go
-CNPJ 12.345.678/0001-95 é válido? true
-CNPJ formatado: 12.345.678/0001-95
+Exemplo de validação de CNPJ:
+CNPJ: 00.000.000/0001-91
+Nome: BANCO DO BRASIL SA
+Nome Fantasia: DIRECAO GERAL
+Atividade Principal: Bancos múltiplos, com carteira comercial
+Município: BRASILIA
+UF: DF
+Status: OK
 
 ```
 
